@@ -21,13 +21,13 @@ const DataBlocks: FC<ComponentDefault> = ({ className }) => {
       value: `${numeral(state.blockTime).format('0.00')} s`,
       className: classes.blockTime,
     },
-    {
-      key: t('price'),
-      value: state.price !== null ? `$${numeral(state.price).format('0.000')}` : 'N/A',
-      description: t('dataFrom'),
-      Icon: <CoinGeckoIcon />,
-      className: classes.price,
-    },
+    //{
+    //  key: t('price'),
+    //  value: state.price !== null ? `$${numeral(state.price).format('0.000')}` : 'N/A',
+    //  description: t('dataFrom'),
+    //  Icon: <CoinGeckoIcon />,
+    //  className: classes.price,
+    //},
     {
       key: t('activeValidators'),
       value: numeral(state.validators.active).format('0,0'),

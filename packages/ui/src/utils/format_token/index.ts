@@ -13,6 +13,7 @@ const { tokenUnits } = chainConfig();
  */
 export const formatToken = (value: number | string | null | undefined, denom = ''): TokenUnit => {
   const selectedDenom = tokenUnits?.[denom];
+  console.log('selectedDenom: ', selectedDenom);
 
   if (typeof value !== 'string' && typeof value !== 'number') {
     value = '0';

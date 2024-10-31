@@ -77,17 +77,17 @@ export const useDataBlocks = () => {
   // ====================================
   // token price
   // ====================================
-  useTokenPriceListenerSubscription({
-    variables: {
-      denom: tokenUnits?.[primaryTokenUnit]?.display,
-    },
-    onData: (data) => {
-      setState((prevState) => ({
-        ...prevState,
-        price: data.data.data ? formatTokenPrice(data.data.data, state) : 0,
-      }));
-    },
-  });
+  //useTokenPriceListenerSubscription({
+  //  variables: {
+  //    denom: tokenUnits?.[primaryTokenUnit]?.display,
+  //  },
+  //  onData: (data) => {
+  //    setState((prevState) => ({
+  //      ...prevState,
+  //      price: data.data.data ? formatTokenPrice(data.data.data, state) : 0,
+  //    }));
+  //  },
+  //});
 
   // ====================================
   // validators

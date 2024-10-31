@@ -16,13 +16,13 @@ const { primaryTokenUnit, tokenUnits } = chainConfig();
 export function useMarketRecoil() {
   const [market, setMarket] = useRecoilState(writeMarket) as [
     AtomState,
-    SetterOrUpdater<AtomState>
+    SetterOrUpdater<AtomState>,
   ];
 
   useMarketDataQuery({
-    variables: {
-      denom: tokenUnits?.[primaryTokenUnit]?.display,
-    },
+    //variables: {
+    //  denom: tokenUnits?.[primaryTokenUnit]?.display,
+    //},
     onCompleted: (data) => {
       if (data) {
         setMarket(formatUseChainIdQuery(data));
@@ -57,7 +57,9 @@ export function useMarketRecoil() {
     const inflation = data?.inflation?.[0]?.value ?? 0;
 
     /* Getting the supply amount and formatting it. */
+    console.log('supply: ', data.supply);
     const rawSupplyAmount = getDenom(data?.supply?.[0]?.coins, primaryTokenUnit).amount;
+    console.log('rawSupplyAmount: ', rawSupplyAmount);
     const supply = formatToken(rawSupplyAmount, primaryTokenUnit);
 
     if (communityPoolCoin) {

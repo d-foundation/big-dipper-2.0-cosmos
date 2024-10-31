@@ -215,7 +215,7 @@
         "account": "dchain"
       },
       "primaryTokenUnit": "udt",
-      "votingPowerTokenUnit": "udt",
+      "votingPowerTokenUnit": "dt",
       "tokenUnits": {
         "udt": {
           "display": "dt",
