@@ -3,8 +3,9 @@ import useStyles from '@/components/ChainIcon/useStyles';
 import Image, { type ImageProps } from 'next/image';
 import baseIconLight from 'shared-utils/assets/icons/base-light.svg?url';
 import baseLogoLight from 'shared-utils/assets/logos/base-light.svg?url';
-import dchainLogoLight from 'shared-utils/assets/logos/dchain-light.svg?url';
-import dchainIconLight from 'shared-utils/assets/icons/dchain-light.svg?url';
+import dchainLogoDark from 'shared-utils/assets/logos/dchain-dark-bg.svg?url';
+import dchainLogoLight from 'shared-utils/assets/logos/dchain-light-bg.svg?url';
+import dchainIconLight from 'shared-utils/assets/icons/dchain-icon.png?url';
 
 interface IconProps extends Omit<ImageProps, 'id' | 'src'> {
   type: 'icon' | 'logo';
@@ -24,7 +25,7 @@ const ChainIcon = ({
   switch (chainName) {
     case 'dchain':
       [iconDark, iconLight] =
-        type === 'icon' ? [dchainIconLight, dchainIconLight] : [dchainLogoLight, dchainLogoLight];
+        type === 'icon' ? [dchainIconLight, dchainIconLight] : [dchainLogoDark, dchainLogoLight];
       break;
     default:
       throw new Error(`chain ${chainName} not supported`);

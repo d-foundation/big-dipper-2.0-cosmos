@@ -2,12 +2,12 @@
   "chainName": "dchain",
   "title": "DChain Block Explorer",
   "extra": {
-    "profile": true,
+    "profile": false,
     "graphqlWs": false
   },
-  "previewImage": "https://s3.bigdipper.live/desmos.png",
+  "previewImage": "https://brand.dfoundation.io/d-foundation-preview.png",
   "themes": {
-    "default": "light",
+    "default": "dark",
     "themeList": ["dark", "light", "deuteranopia", "tritanopia"],
     "dark": {
       "primary": {
