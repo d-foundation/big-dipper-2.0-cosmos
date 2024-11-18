@@ -679,6 +679,168 @@ export enum Community_Pool_Select_Column {
   Height = 'height'
 }
 
+/** columns and relationships of "dgov_oversight_committee_address" */
+export type Dgov_Oversight_Committee_Address = {
+  __typename?: 'dgov_oversight_committee_address';
+  address: Scalars['String'];
+  /** An object relationship */
+  group_policy?: Maybe<Group_Policies>;
+  height: Scalars['bigint'];
+};
+
+/** aggregated selection of "dgov_oversight_committee_address" */
+export type Dgov_Oversight_Committee_Address_Aggregate = {
+  __typename?: 'dgov_oversight_committee_address_aggregate';
+  aggregate?: Maybe<Dgov_Oversight_Committee_Address_Aggregate_Fields>;
+  nodes: Array<Dgov_Oversight_Committee_Address>;
+};
+
+/** aggregate fields of "dgov_oversight_committee_address" */
+export type Dgov_Oversight_Committee_Address_Aggregate_Fields = {
+  __typename?: 'dgov_oversight_committee_address_aggregate_fields';
+  avg?: Maybe<Dgov_Oversight_Committee_Address_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Dgov_Oversight_Committee_Address_Max_Fields>;
+  min?: Maybe<Dgov_Oversight_Committee_Address_Min_Fields>;
+  stddev?: Maybe<Dgov_Oversight_Committee_Address_Stddev_Fields>;
+  stddev_pop?: Maybe<Dgov_Oversight_Committee_Address_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Dgov_Oversight_Committee_Address_Stddev_Samp_Fields>;
+  sum?: Maybe<Dgov_Oversight_Committee_Address_Sum_Fields>;
+  var_pop?: Maybe<Dgov_Oversight_Committee_Address_Var_Pop_Fields>;
+  var_samp?: Maybe<Dgov_Oversight_Committee_Address_Var_Samp_Fields>;
+  variance?: Maybe<Dgov_Oversight_Committee_Address_Variance_Fields>;
+};
+
+
+/** aggregate fields of "dgov_oversight_committee_address" */
+export type Dgov_Oversight_Committee_Address_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** aggregate avg on columns */
+export type Dgov_Oversight_Committee_Address_Avg_Fields = {
+  __typename?: 'dgov_oversight_committee_address_avg_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** Boolean expression to filter rows from the table "dgov_oversight_committee_address". All fields are combined with a logical 'AND'. */
+export type Dgov_Oversight_Committee_Address_Bool_Exp = {
+  _and?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Bool_Exp>>;
+  _not?: InputMaybe<Dgov_Oversight_Committee_Address_Bool_Exp>;
+  _or?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Bool_Exp>>;
+  address?: InputMaybe<String_Comparison_Exp>;
+  group_policy?: InputMaybe<Group_Policies_Bool_Exp>;
+  height?: InputMaybe<Bigint_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Dgov_Oversight_Committee_Address_Max_Fields = {
+  __typename?: 'dgov_oversight_committee_address_max_fields';
+  address?: Maybe<Scalars['String']>;
+  height?: Maybe<Scalars['bigint']>;
+};
+
+/** aggregate min on columns */
+export type Dgov_Oversight_Committee_Address_Min_Fields = {
+  __typename?: 'dgov_oversight_committee_address_min_fields';
+  address?: Maybe<Scalars['String']>;
+  height?: Maybe<Scalars['bigint']>;
+};
+
+/** Ordering options when selecting data from "dgov_oversight_committee_address". */
+export type Dgov_Oversight_Committee_Address_Order_By = {
+  address?: InputMaybe<Order_By>;
+  group_policy?: InputMaybe<Group_Policies_Order_By>;
+  height?: InputMaybe<Order_By>;
+};
+
+/** select columns of table "dgov_oversight_committee_address" */
+export enum Dgov_Oversight_Committee_Address_Select_Column {
+  /** column name */
+  Address = 'address',
+  /** column name */
+  Height = 'height'
+}
+
+/** aggregate stddev on columns */
+export type Dgov_Oversight_Committee_Address_Stddev_Fields = {
+  __typename?: 'dgov_oversight_committee_address_stddev_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Dgov_Oversight_Committee_Address_Stddev_Pop_Fields = {
+  __typename?: 'dgov_oversight_committee_address_stddev_pop_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Dgov_Oversight_Committee_Address_Stddev_Samp_Fields = {
+  __typename?: 'dgov_oversight_committee_address_stddev_samp_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate sum on columns */
+export type Dgov_Oversight_Committee_Address_Sum_Fields = {
+  __typename?: 'dgov_oversight_committee_address_sum_fields';
+  height?: Maybe<Scalars['bigint']>;
+};
+
+/** aggregate var_pop on columns */
+export type Dgov_Oversight_Committee_Address_Var_Pop_Fields = {
+  __typename?: 'dgov_oversight_committee_address_var_pop_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate var_samp on columns */
+export type Dgov_Oversight_Committee_Address_Var_Samp_Fields = {
+  __typename?: 'dgov_oversight_committee_address_var_samp_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate variance on columns */
+export type Dgov_Oversight_Committee_Address_Variance_Fields = {
+  __typename?: 'dgov_oversight_committee_address_variance_fields';
+  height?: Maybe<Scalars['Float']>;
+};
+
+/** columns and relationships of "dgov_oversight_committee_params" */
+export type Dgov_Oversight_Committee_Params = {
+  __typename?: 'dgov_oversight_committee_params';
+  height: Scalars['bigint'];
+  params: Scalars['jsonb'];
+};
+
+
+/** columns and relationships of "dgov_oversight_committee_params" */
+export type Dgov_Oversight_Committee_ParamsParamsArgs = {
+  path?: InputMaybe<Scalars['String']>;
+};
+
+/** Boolean expression to filter rows from the table "dgov_oversight_committee_params". All fields are combined with a logical 'AND'. */
+export type Dgov_Oversight_Committee_Params_Bool_Exp = {
+  _and?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Bool_Exp>>;
+  _not?: InputMaybe<Dgov_Oversight_Committee_Params_Bool_Exp>;
+  _or?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Bool_Exp>>;
+  height?: InputMaybe<Bigint_Comparison_Exp>;
+  params?: InputMaybe<Jsonb_Comparison_Exp>;
+};
+
+/** Ordering options when selecting data from "dgov_oversight_committee_params". */
+export type Dgov_Oversight_Committee_Params_Order_By = {
+  height?: InputMaybe<Order_By>;
+  params?: InputMaybe<Order_By>;
+};
+
+/** select columns of table "dgov_oversight_committee_params" */
+export enum Dgov_Oversight_Committee_Params_Select_Column {
+  /** column name */
+  Height = 'height',
+  /** column name */
+  Params = 'params'
+}
+
 /** columns and relationships of "distribution_params" */
 export type Distribution_Params = {
   __typename?: 'distribution_params';
@@ -1155,6 +1317,709 @@ export enum Gov_Params_Select_Column {
   /** column name */
   Params = 'params'
 }
+
+/** columns and relationships of "group_members" */
+export type Group_Members = {
+  __typename?: 'group_members';
+  added_at: Scalars['timestamp'];
+  /** An object relationship */
+  group: Groups;
+  group_id: Scalars['bigint'];
+  member_address: Scalars['String'];
+  metadata?: Maybe<Scalars['jsonb']>;
+  weight: Scalars['numeric'];
+};
+
+
+/** columns and relationships of "group_members" */
+export type Group_MembersMetadataArgs = {
+  path?: InputMaybe<Scalars['String']>;
+};
+
+/** aggregated selection of "group_members" */
+export type Group_Members_Aggregate = {
+  __typename?: 'group_members_aggregate';
+  aggregate?: Maybe<Group_Members_Aggregate_Fields>;
+  nodes: Array<Group_Members>;
+};
+
+/** aggregate fields of "group_members" */
+export type Group_Members_Aggregate_Fields = {
+  __typename?: 'group_members_aggregate_fields';
+  avg?: Maybe<Group_Members_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Group_Members_Max_Fields>;
+  min?: Maybe<Group_Members_Min_Fields>;
+  stddev?: Maybe<Group_Members_Stddev_Fields>;
+  stddev_pop?: Maybe<Group_Members_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Group_Members_Stddev_Samp_Fields>;
+  sum?: Maybe<Group_Members_Sum_Fields>;
+  var_pop?: Maybe<Group_Members_Var_Pop_Fields>;
+  var_samp?: Maybe<Group_Members_Var_Samp_Fields>;
+  variance?: Maybe<Group_Members_Variance_Fields>;
+};
+
+
+/** aggregate fields of "group_members" */
+export type Group_Members_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Group_Members_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** order by aggregate values of table "group_members" */
+export type Group_Members_Aggregate_Order_By = {
+  avg?: InputMaybe<Group_Members_Avg_Order_By>;
+  count?: InputMaybe<Order_By>;
+  max?: InputMaybe<Group_Members_Max_Order_By>;
+  min?: InputMaybe<Group_Members_Min_Order_By>;
+  stddev?: InputMaybe<Group_Members_Stddev_Order_By>;
+  stddev_pop?: InputMaybe<Group_Members_Stddev_Pop_Order_By>;
+  stddev_samp?: InputMaybe<Group_Members_Stddev_Samp_Order_By>;
+  sum?: InputMaybe<Group_Members_Sum_Order_By>;
+  var_pop?: InputMaybe<Group_Members_Var_Pop_Order_By>;
+  var_samp?: InputMaybe<Group_Members_Var_Samp_Order_By>;
+  variance?: InputMaybe<Group_Members_Variance_Order_By>;
+};
+
+/** aggregate avg on columns */
+export type Group_Members_Avg_Fields = {
+  __typename?: 'group_members_avg_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by avg() on columns of table "group_members" */
+export type Group_Members_Avg_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** Boolean expression to filter rows from the table "group_members". All fields are combined with a logical 'AND'. */
+export type Group_Members_Bool_Exp = {
+  _and?: InputMaybe<Array<Group_Members_Bool_Exp>>;
+  _not?: InputMaybe<Group_Members_Bool_Exp>;
+  _or?: InputMaybe<Array<Group_Members_Bool_Exp>>;
+  added_at?: InputMaybe<Timestamp_Comparison_Exp>;
+  group?: InputMaybe<Groups_Bool_Exp>;
+  group_id?: InputMaybe<Bigint_Comparison_Exp>;
+  member_address?: InputMaybe<String_Comparison_Exp>;
+  metadata?: InputMaybe<Jsonb_Comparison_Exp>;
+  weight?: InputMaybe<Numeric_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Group_Members_Max_Fields = {
+  __typename?: 'group_members_max_fields';
+  added_at?: Maybe<Scalars['timestamp']>;
+  group_id?: Maybe<Scalars['bigint']>;
+  member_address?: Maybe<Scalars['String']>;
+  weight?: Maybe<Scalars['numeric']>;
+};
+
+/** order by max() on columns of table "group_members" */
+export type Group_Members_Max_Order_By = {
+  added_at?: InputMaybe<Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  member_address?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate min on columns */
+export type Group_Members_Min_Fields = {
+  __typename?: 'group_members_min_fields';
+  added_at?: Maybe<Scalars['timestamp']>;
+  group_id?: Maybe<Scalars['bigint']>;
+  member_address?: Maybe<Scalars['String']>;
+  weight?: Maybe<Scalars['numeric']>;
+};
+
+/** order by min() on columns of table "group_members" */
+export type Group_Members_Min_Order_By = {
+  added_at?: InputMaybe<Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  member_address?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** Ordering options when selecting data from "group_members". */
+export type Group_Members_Order_By = {
+  added_at?: InputMaybe<Order_By>;
+  group?: InputMaybe<Groups_Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  member_address?: InputMaybe<Order_By>;
+  metadata?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** select columns of table "group_members" */
+export enum Group_Members_Select_Column {
+  /** column name */
+  AddedAt = 'added_at',
+  /** column name */
+  GroupId = 'group_id',
+  /** column name */
+  MemberAddress = 'member_address',
+  /** column name */
+  Metadata = 'metadata',
+  /** column name */
+  Weight = 'weight'
+}
+
+/** aggregate stddev on columns */
+export type Group_Members_Stddev_Fields = {
+  __typename?: 'group_members_stddev_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev() on columns of table "group_members" */
+export type Group_Members_Stddev_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Group_Members_Stddev_Pop_Fields = {
+  __typename?: 'group_members_stddev_pop_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_pop() on columns of table "group_members" */
+export type Group_Members_Stddev_Pop_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Group_Members_Stddev_Samp_Fields = {
+  __typename?: 'group_members_stddev_samp_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_samp() on columns of table "group_members" */
+export type Group_Members_Stddev_Samp_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate sum on columns */
+export type Group_Members_Sum_Fields = {
+  __typename?: 'group_members_sum_fields';
+  group_id?: Maybe<Scalars['bigint']>;
+  weight?: Maybe<Scalars['numeric']>;
+};
+
+/** order by sum() on columns of table "group_members" */
+export type Group_Members_Sum_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate var_pop on columns */
+export type Group_Members_Var_Pop_Fields = {
+  __typename?: 'group_members_var_pop_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_pop() on columns of table "group_members" */
+export type Group_Members_Var_Pop_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate var_samp on columns */
+export type Group_Members_Var_Samp_Fields = {
+  __typename?: 'group_members_var_samp_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_samp() on columns of table "group_members" */
+export type Group_Members_Var_Samp_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** aggregate variance on columns */
+export type Group_Members_Variance_Fields = {
+  __typename?: 'group_members_variance_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  weight?: Maybe<Scalars['Float']>;
+};
+
+/** order by variance() on columns of table "group_members" */
+export type Group_Members_Variance_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  weight?: InputMaybe<Order_By>;
+};
+
+/** columns and relationships of "group_policies" */
+export type Group_Policies = {
+  __typename?: 'group_policies';
+  address: Scalars['String'];
+  admin_address: Scalars['String'];
+  created_at: Scalars['timestamp'];
+  decision_policy: Scalars['jsonb'];
+  /** An object relationship */
+  group: Groups;
+  group_id: Scalars['bigint'];
+  metadata?: Maybe<Scalars['jsonb']>;
+  version: Scalars['bigint'];
+};
+
+
+/** columns and relationships of "group_policies" */
+export type Group_PoliciesDecision_PolicyArgs = {
+  path?: InputMaybe<Scalars['String']>;
+};
+
+
+/** columns and relationships of "group_policies" */
+export type Group_PoliciesMetadataArgs = {
+  path?: InputMaybe<Scalars['String']>;
+};
+
+/** aggregated selection of "group_policies" */
+export type Group_Policies_Aggregate = {
+  __typename?: 'group_policies_aggregate';
+  aggregate?: Maybe<Group_Policies_Aggregate_Fields>;
+  nodes: Array<Group_Policies>;
+};
+
+/** aggregate fields of "group_policies" */
+export type Group_Policies_Aggregate_Fields = {
+  __typename?: 'group_policies_aggregate_fields';
+  avg?: Maybe<Group_Policies_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Group_Policies_Max_Fields>;
+  min?: Maybe<Group_Policies_Min_Fields>;
+  stddev?: Maybe<Group_Policies_Stddev_Fields>;
+  stddev_pop?: Maybe<Group_Policies_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Group_Policies_Stddev_Samp_Fields>;
+  sum?: Maybe<Group_Policies_Sum_Fields>;
+  var_pop?: Maybe<Group_Policies_Var_Pop_Fields>;
+  var_samp?: Maybe<Group_Policies_Var_Samp_Fields>;
+  variance?: Maybe<Group_Policies_Variance_Fields>;
+};
+
+
+/** aggregate fields of "group_policies" */
+export type Group_Policies_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** order by aggregate values of table "group_policies" */
+export type Group_Policies_Aggregate_Order_By = {
+  avg?: InputMaybe<Group_Policies_Avg_Order_By>;
+  count?: InputMaybe<Order_By>;
+  max?: InputMaybe<Group_Policies_Max_Order_By>;
+  min?: InputMaybe<Group_Policies_Min_Order_By>;
+  stddev?: InputMaybe<Group_Policies_Stddev_Order_By>;
+  stddev_pop?: InputMaybe<Group_Policies_Stddev_Pop_Order_By>;
+  stddev_samp?: InputMaybe<Group_Policies_Stddev_Samp_Order_By>;
+  sum?: InputMaybe<Group_Policies_Sum_Order_By>;
+  var_pop?: InputMaybe<Group_Policies_Var_Pop_Order_By>;
+  var_samp?: InputMaybe<Group_Policies_Var_Samp_Order_By>;
+  variance?: InputMaybe<Group_Policies_Variance_Order_By>;
+};
+
+/** aggregate avg on columns */
+export type Group_Policies_Avg_Fields = {
+  __typename?: 'group_policies_avg_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by avg() on columns of table "group_policies" */
+export type Group_Policies_Avg_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** Boolean expression to filter rows from the table "group_policies". All fields are combined with a logical 'AND'. */
+export type Group_Policies_Bool_Exp = {
+  _and?: InputMaybe<Array<Group_Policies_Bool_Exp>>;
+  _not?: InputMaybe<Group_Policies_Bool_Exp>;
+  _or?: InputMaybe<Array<Group_Policies_Bool_Exp>>;
+  address?: InputMaybe<String_Comparison_Exp>;
+  admin_address?: InputMaybe<String_Comparison_Exp>;
+  created_at?: InputMaybe<Timestamp_Comparison_Exp>;
+  decision_policy?: InputMaybe<Jsonb_Comparison_Exp>;
+  group?: InputMaybe<Groups_Bool_Exp>;
+  group_id?: InputMaybe<Bigint_Comparison_Exp>;
+  metadata?: InputMaybe<Jsonb_Comparison_Exp>;
+  version?: InputMaybe<Bigint_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Group_Policies_Max_Fields = {
+  __typename?: 'group_policies_max_fields';
+  address?: Maybe<Scalars['String']>;
+  admin_address?: Maybe<Scalars['String']>;
+  created_at?: Maybe<Scalars['timestamp']>;
+  group_id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** order by max() on columns of table "group_policies" */
+export type Group_Policies_Max_Order_By = {
+  address?: InputMaybe<Order_By>;
+  admin_address?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate min on columns */
+export type Group_Policies_Min_Fields = {
+  __typename?: 'group_policies_min_fields';
+  address?: Maybe<Scalars['String']>;
+  admin_address?: Maybe<Scalars['String']>;
+  created_at?: Maybe<Scalars['timestamp']>;
+  group_id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** order by min() on columns of table "group_policies" */
+export type Group_Policies_Min_Order_By = {
+  address?: InputMaybe<Order_By>;
+  admin_address?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** Ordering options when selecting data from "group_policies". */
+export type Group_Policies_Order_By = {
+  address?: InputMaybe<Order_By>;
+  admin_address?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<Order_By>;
+  decision_policy?: InputMaybe<Order_By>;
+  group?: InputMaybe<Groups_Order_By>;
+  group_id?: InputMaybe<Order_By>;
+  metadata?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** select columns of table "group_policies" */
+export enum Group_Policies_Select_Column {
+  /** column name */
+  Address = 'address',
+  /** column name */
+  AdminAddress = 'admin_address',
+  /** column name */
+  CreatedAt = 'created_at',
+  /** column name */
+  DecisionPolicy = 'decision_policy',
+  /** column name */
+  GroupId = 'group_id',
+  /** column name */
+  Metadata = 'metadata',
+  /** column name */
+  Version = 'version'
+}
+
+/** aggregate stddev on columns */
+export type Group_Policies_Stddev_Fields = {
+  __typename?: 'group_policies_stddev_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev() on columns of table "group_policies" */
+export type Group_Policies_Stddev_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Group_Policies_Stddev_Pop_Fields = {
+  __typename?: 'group_policies_stddev_pop_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_pop() on columns of table "group_policies" */
+export type Group_Policies_Stddev_Pop_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Group_Policies_Stddev_Samp_Fields = {
+  __typename?: 'group_policies_stddev_samp_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_samp() on columns of table "group_policies" */
+export type Group_Policies_Stddev_Samp_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate sum on columns */
+export type Group_Policies_Sum_Fields = {
+  __typename?: 'group_policies_sum_fields';
+  group_id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** order by sum() on columns of table "group_policies" */
+export type Group_Policies_Sum_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate var_pop on columns */
+export type Group_Policies_Var_Pop_Fields = {
+  __typename?: 'group_policies_var_pop_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_pop() on columns of table "group_policies" */
+export type Group_Policies_Var_Pop_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate var_samp on columns */
+export type Group_Policies_Var_Samp_Fields = {
+  __typename?: 'group_policies_var_samp_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_samp() on columns of table "group_policies" */
+export type Group_Policies_Var_Samp_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** aggregate variance on columns */
+export type Group_Policies_Variance_Fields = {
+  __typename?: 'group_policies_variance_fields';
+  group_id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** order by variance() on columns of table "group_policies" */
+export type Group_Policies_Variance_Order_By = {
+  group_id?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** columns and relationships of "groups" */
+export type Groups = {
+  __typename?: 'groups';
+  admin_address: Scalars['String'];
+  created_at: Scalars['timestamp'];
+  /** fetch data from the table: "group_members" */
+  group_members: Array<Group_Members>;
+  /** An aggregate relationship */
+  group_members_aggregate: Group_Members_Aggregate;
+  /** An array relationship */
+  group_policies: Array<Group_Policies>;
+  /** An aggregate relationship */
+  group_policies_aggregate: Group_Policies_Aggregate;
+  id: Scalars['bigint'];
+  metadata?: Maybe<Scalars['jsonb']>;
+  version: Scalars['bigint'];
+};
+
+
+/** columns and relationships of "groups" */
+export type GroupsGroup_MembersArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+/** columns and relationships of "groups" */
+export type GroupsGroup_Members_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+/** columns and relationships of "groups" */
+export type GroupsGroup_PoliciesArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+/** columns and relationships of "groups" */
+export type GroupsGroup_Policies_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+/** columns and relationships of "groups" */
+export type GroupsMetadataArgs = {
+  path?: InputMaybe<Scalars['String']>;
+};
+
+/** aggregated selection of "groups" */
+export type Groups_Aggregate = {
+  __typename?: 'groups_aggregate';
+  aggregate?: Maybe<Groups_Aggregate_Fields>;
+  nodes: Array<Groups>;
+};
+
+/** aggregate fields of "groups" */
+export type Groups_Aggregate_Fields = {
+  __typename?: 'groups_aggregate_fields';
+  avg?: Maybe<Groups_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Groups_Max_Fields>;
+  min?: Maybe<Groups_Min_Fields>;
+  stddev?: Maybe<Groups_Stddev_Fields>;
+  stddev_pop?: Maybe<Groups_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Groups_Stddev_Samp_Fields>;
+  sum?: Maybe<Groups_Sum_Fields>;
+  var_pop?: Maybe<Groups_Var_Pop_Fields>;
+  var_samp?: Maybe<Groups_Var_Samp_Fields>;
+  variance?: Maybe<Groups_Variance_Fields>;
+};
+
+
+/** aggregate fields of "groups" */
+export type Groups_Aggregate_FieldsCountArgs = {
+  columns?: InputMaybe<Array<Groups_Select_Column>>;
+  distinct?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** aggregate avg on columns */
+export type Groups_Avg_Fields = {
+  __typename?: 'groups_avg_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** Boolean expression to filter rows from the table "groups". All fields are combined with a logical 'AND'. */
+export type Groups_Bool_Exp = {
+  _and?: InputMaybe<Array<Groups_Bool_Exp>>;
+  _not?: InputMaybe<Groups_Bool_Exp>;
+  _or?: InputMaybe<Array<Groups_Bool_Exp>>;
+  admin_address?: InputMaybe<String_Comparison_Exp>;
+  created_at?: InputMaybe<Timestamp_Comparison_Exp>;
+  group_members?: InputMaybe<Group_Members_Bool_Exp>;
+  group_policies?: InputMaybe<Group_Policies_Bool_Exp>;
+  id?: InputMaybe<Bigint_Comparison_Exp>;
+  metadata?: InputMaybe<Jsonb_Comparison_Exp>;
+  version?: InputMaybe<Bigint_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Groups_Max_Fields = {
+  __typename?: 'groups_max_fields';
+  admin_address?: Maybe<Scalars['String']>;
+  created_at?: Maybe<Scalars['timestamp']>;
+  id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** aggregate min on columns */
+export type Groups_Min_Fields = {
+  __typename?: 'groups_min_fields';
+  admin_address?: Maybe<Scalars['String']>;
+  created_at?: Maybe<Scalars['timestamp']>;
+  id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** Ordering options when selecting data from "groups". */
+export type Groups_Order_By = {
+  admin_address?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<Order_By>;
+  group_members_aggregate?: InputMaybe<Group_Members_Aggregate_Order_By>;
+  group_policies_aggregate?: InputMaybe<Group_Policies_Aggregate_Order_By>;
+  id?: InputMaybe<Order_By>;
+  metadata?: InputMaybe<Order_By>;
+  version?: InputMaybe<Order_By>;
+};
+
+/** select columns of table "groups" */
+export enum Groups_Select_Column {
+  /** column name */
+  AdminAddress = 'admin_address',
+  /** column name */
+  CreatedAt = 'created_at',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Metadata = 'metadata',
+  /** column name */
+  Version = 'version'
+}
+
+/** aggregate stddev on columns */
+export type Groups_Stddev_Fields = {
+  __typename?: 'groups_stddev_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Groups_Stddev_Pop_Fields = {
+  __typename?: 'groups_stddev_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Groups_Stddev_Samp_Fields = {
+  __typename?: 'groups_stddev_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate sum on columns */
+export type Groups_Sum_Fields = {
+  __typename?: 'groups_sum_fields';
+  id?: Maybe<Scalars['bigint']>;
+  version?: Maybe<Scalars['bigint']>;
+};
+
+/** aggregate var_pop on columns */
+export type Groups_Var_Pop_Fields = {
+  __typename?: 'groups_var_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate var_samp on columns */
+export type Groups_Var_Samp_Fields = {
+  __typename?: 'groups_var_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate variance on columns */
+export type Groups_Variance_Fields = {
+  __typename?: 'groups_variance_fields';
+  id?: Maybe<Scalars['Float']>;
+  version?: Maybe<Scalars['Float']>;
+};
 
 /** columns and relationships of "inflation" */
 export type Inflation = {
@@ -2769,6 +3634,12 @@ export type Query_Root = {
   block_by_pk?: Maybe<Block>;
   /** fetch data from the table: "community_pool" */
   community_pool: Array<Community_Pool>;
+  /** fetch data from the table: "dgov_oversight_committee_address" */
+  dgov_oversight_committee_address: Array<Dgov_Oversight_Committee_Address>;
+  /** fetch aggregated fields from the table: "dgov_oversight_committee_address" */
+  dgov_oversight_committee_address_aggregate: Dgov_Oversight_Committee_Address_Aggregate;
+  /** fetch data from the table: "dgov_oversight_committee_params" */
+  dgov_oversight_committee_params: Array<Dgov_Oversight_Committee_Params>;
   /** fetch data from the table: "distribution_params" */
   distribution_params: Array<Distribution_Params>;
   /** fetch data from the table: "double_sign_evidence" */
@@ -2781,6 +3652,24 @@ export type Query_Root = {
   genesis: Array<Genesis>;
   /** fetch data from the table: "gov_params" */
   gov_params: Array<Gov_Params>;
+  /** fetch data from the table: "group_members" */
+  group_members: Array<Group_Members>;
+  /** An aggregate relationship */
+  group_members_aggregate: Group_Members_Aggregate;
+  /** fetch data from the table: "group_members" using primary key columns */
+  group_members_by_pk?: Maybe<Group_Members>;
+  /** An array relationship */
+  group_policies: Array<Group_Policies>;
+  /** An aggregate relationship */
+  group_policies_aggregate: Group_Policies_Aggregate;
+  /** fetch data from the table: "group_policies" using primary key columns */
+  group_policies_by_pk?: Maybe<Group_Policies>;
+  /** fetch data from the table: "groups" */
+  groups: Array<Groups>;
+  /** fetch aggregated fields from the table: "groups" */
+  groups_aggregate: Groups_Aggregate;
+  /** fetch data from the table: "groups" using primary key columns */
+  groups_by_pk?: Maybe<Groups>;
   /** fetch data from the table: "inflation" */
   inflation: Array<Inflation>;
   /** fetch data from the table: "message" */
@@ -3043,6 +3932,33 @@ export type Query_RootCommunity_PoolArgs = {
 };
 
 
+export type Query_RootDgov_Oversight_Committee_AddressArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Address_Bool_Exp>;
+};
+
+
+export type Query_RootDgov_Oversight_Committee_Address_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Address_Bool_Exp>;
+};
+
+
+export type Query_RootDgov_Oversight_Committee_ParamsArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Params_Bool_Exp>;
+};
+
+
 export type Query_RootDistribution_ParamsArgs = {
   distinct_on?: InputMaybe<Array<Distribution_Params_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -3094,6 +4010,76 @@ export type Query_RootGov_ParamsArgs = {
   offset?: InputMaybe<Scalars['Int']>;
   order_by?: InputMaybe<Array<Gov_Params_Order_By>>;
   where?: InputMaybe<Gov_Params_Bool_Exp>;
+};
+
+
+export type Query_RootGroup_MembersArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+export type Query_RootGroup_Members_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+export type Query_RootGroup_Members_By_PkArgs = {
+  group_id: Scalars['bigint'];
+  member_address: Scalars['String'];
+};
+
+
+export type Query_RootGroup_PoliciesArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+export type Query_RootGroup_Policies_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+export type Query_RootGroup_Policies_By_PkArgs = {
+  address: Scalars['String'];
+};
+
+
+export type Query_RootGroupsArgs = {
+  distinct_on?: InputMaybe<Array<Groups_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Groups_Order_By>>;
+  where?: InputMaybe<Groups_Bool_Exp>;
+};
+
+
+export type Query_RootGroups_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Groups_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Groups_Order_By>>;
+  where?: InputMaybe<Groups_Bool_Exp>;
+};
+
+
+export type Query_RootGroups_By_PkArgs = {
+  id: Scalars['bigint'];
 };
 
 
@@ -3818,6 +4804,12 @@ export type Subscription_Root = {
   block_by_pk?: Maybe<Block>;
   /** fetch data from the table: "community_pool" */
   community_pool: Array<Community_Pool>;
+  /** fetch data from the table: "dgov_oversight_committee_address" */
+  dgov_oversight_committee_address: Array<Dgov_Oversight_Committee_Address>;
+  /** fetch aggregated fields from the table: "dgov_oversight_committee_address" */
+  dgov_oversight_committee_address_aggregate: Dgov_Oversight_Committee_Address_Aggregate;
+  /** fetch data from the table: "dgov_oversight_committee_params" */
+  dgov_oversight_committee_params: Array<Dgov_Oversight_Committee_Params>;
   /** fetch data from the table: "distribution_params" */
   distribution_params: Array<Distribution_Params>;
   /** fetch data from the table: "double_sign_evidence" */
@@ -3830,6 +4822,24 @@ export type Subscription_Root = {
   genesis: Array<Genesis>;
   /** fetch data from the table: "gov_params" */
   gov_params: Array<Gov_Params>;
+  /** fetch data from the table: "group_members" */
+  group_members: Array<Group_Members>;
+  /** An aggregate relationship */
+  group_members_aggregate: Group_Members_Aggregate;
+  /** fetch data from the table: "group_members" using primary key columns */
+  group_members_by_pk?: Maybe<Group_Members>;
+  /** An array relationship */
+  group_policies: Array<Group_Policies>;
+  /** An aggregate relationship */
+  group_policies_aggregate: Group_Policies_Aggregate;
+  /** fetch data from the table: "group_policies" using primary key columns */
+  group_policies_by_pk?: Maybe<Group_Policies>;
+  /** fetch data from the table: "groups" */
+  groups: Array<Groups>;
+  /** fetch aggregated fields from the table: "groups" */
+  groups_aggregate: Groups_Aggregate;
+  /** fetch data from the table: "groups" using primary key columns */
+  groups_by_pk?: Maybe<Groups>;
   /** fetch data from the table: "inflation" */
   inflation: Array<Inflation>;
   /** fetch data from the table: "message" */
@@ -4006,6 +5016,33 @@ export type Subscription_RootCommunity_PoolArgs = {
 };
 
 
+export type Subscription_RootDgov_Oversight_Committee_AddressArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Address_Bool_Exp>;
+};
+
+
+export type Subscription_RootDgov_Oversight_Committee_Address_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Address_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Address_Bool_Exp>;
+};
+
+
+export type Subscription_RootDgov_Oversight_Committee_ParamsArgs = {
+  distinct_on?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Dgov_Oversight_Committee_Params_Order_By>>;
+  where?: InputMaybe<Dgov_Oversight_Committee_Params_Bool_Exp>;
+};
+
+
 export type Subscription_RootDistribution_ParamsArgs = {
   distinct_on?: InputMaybe<Array<Distribution_Params_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -4057,6 +5094,76 @@ export type Subscription_RootGov_ParamsArgs = {
   offset?: InputMaybe<Scalars['Int']>;
   order_by?: InputMaybe<Array<Gov_Params_Order_By>>;
   where?: InputMaybe<Gov_Params_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroup_MembersArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroup_Members_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Members_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Members_Order_By>>;
+  where?: InputMaybe<Group_Members_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroup_Members_By_PkArgs = {
+  group_id: Scalars['bigint'];
+  member_address: Scalars['String'];
+};
+
+
+export type Subscription_RootGroup_PoliciesArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroup_Policies_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Group_Policies_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Group_Policies_Order_By>>;
+  where?: InputMaybe<Group_Policies_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroup_Policies_By_PkArgs = {
+  address: Scalars['String'];
+};
+
+
+export type Subscription_RootGroupsArgs = {
+  distinct_on?: InputMaybe<Array<Groups_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Groups_Order_By>>;
+  where?: InputMaybe<Groups_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroups_AggregateArgs = {
+  distinct_on?: InputMaybe<Array<Groups_Select_Column>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  offset?: InputMaybe<Scalars['Int']>;
+  order_by?: InputMaybe<Array<Groups_Order_By>>;
+  where?: InputMaybe<Groups_Bool_Exp>;
+};
+
+
+export type Subscription_RootGroups_By_PkArgs = {
+  id: Scalars['bigint'];
 };
 
 
@@ -6637,9 +7744,7 @@ export type ChainIdQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ChainIdQuery = { genesis: Array<{ __typename?: 'genesis', time: any, chainId: string }> };
 
-export type MarketDataQueryVariables = Exact<{
-  denom?: InputMaybe<Scalars['String']>;
-}>;
+export type MarketDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type MarketDataQuery = { communityPool: Array<{ __typename?: 'community_pool', coins: any }>, inflation: Array<{ __typename?: 'inflation', value: any }>, supply: Array<{ __typename?: 'supply', coins: any }>, bondedTokens: Array<{ __typename?: 'staking_pool', bonded_tokens: string }>, distributionParams: Array<{ __typename?: 'distribution_params', params: any }> };
@@ -6689,10 +7794,15 @@ export type OnlineVotingPowerQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type OnlineVotingPowerQuery = { activeTotal: { __typename?: 'validator_status_aggregate', aggregate?: { __typename?: 'validator_status_aggregate_fields', count: number } | null }, validatorVotingPowerAggregate: { __typename?: 'validator_voting_power_aggregate', aggregate?: { __typename?: 'validator_voting_power_aggregate_fields', sum?: { __typename?: 'validator_voting_power_sum_fields', votingPower?: any | null } | null } | null }, stakingPool: Array<{ __typename?: 'staking_pool', bonded: string }>, stakingParams: Array<{ __typename?: 'staking_params', params: any }> };
 
+export type GetOversightCommitteeQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetOversightCommitteeQuery = { dgov_oversight_committee_address: Array<{ __typename?: 'dgov_oversight_committee_address', address: string, group_policy?: { __typename?: 'group_policies', address: string, admin_address: string, metadata?: any | null, decision_policy: any, group: { __typename?: 'groups', id: any, admin_address: string, group_members: Array<{ __typename?: 'group_members', member_address: string, weight: any, added_at: any }> } } | null }> };
+
 export type ParamsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ParamsQuery = { stakingParams: Array<{ __typename?: 'staking_params', params: any }>, slashingParams: Array<{ __typename?: 'slashing_params', params: any }>, mintParams: Array<{ __typename?: 'mint_params', params: any }>, distributionParams: Array<{ __typename?: 'distribution_params', params: any }>, govParams: Array<{ __typename?: 'gov_params', params: any, height: any }> };
+export type ParamsQuery = { stakingParams: Array<{ __typename?: 'staking_params', params: any }>, slashingParams: Array<{ __typename?: 'slashing_params', params: any }>, mintParams: Array<{ __typename?: 'mint_params', params: any }>, distributionParams: Array<{ __typename?: 'distribution_params', params: any }>, govParams: Array<{ __typename?: 'gov_params', params: any, height: any }>, dgovParams: Array<{ __typename?: 'dgov_oversight_committee_params', params: any }>, dgovOCAddr: Array<{ __typename?: 'dgov_oversight_committee_address', address: string }> };
 
 export type ProposalDetailsQueryVariables = Exact<{
   proposalId?: InputMaybe<Scalars['Int']>;
@@ -7547,7 +8657,7 @@ export type ChainIdQueryHookResult = ReturnType<typeof useChainIdQuery>;
 export type ChainIdLazyQueryHookResult = ReturnType<typeof useChainIdLazyQuery>;
 export type ChainIdQueryResult = Apollo.QueryResult<ChainIdQuery, ChainIdQueryVariables>;
 export const MarketDataDocument = gql`
-    query MarketData($denom: String) {
+    query MarketData {
   communityPool: community_pool(order_by: {height: desc}, limit: 1) {
     coins
   }
@@ -7578,7 +8688,6 @@ export const MarketDataDocument = gql`
  * @example
  * const { data, loading, error } = useMarketDataQuery({
  *   variables: {
- *      denom: // value for 'denom'
  *   },
  * });
  */
@@ -7862,6 +8971,55 @@ export function useOnlineVotingPowerLazyQuery(baseOptions?: Apollo.LazyQueryHook
 export type OnlineVotingPowerQueryHookResult = ReturnType<typeof useOnlineVotingPowerQuery>;
 export type OnlineVotingPowerLazyQueryHookResult = ReturnType<typeof useOnlineVotingPowerLazyQuery>;
 export type OnlineVotingPowerQueryResult = Apollo.QueryResult<OnlineVotingPowerQuery, OnlineVotingPowerQueryVariables>;
+export const GetOversightCommitteeDocument = gql`
+    query GetOversightCommittee {
+  dgov_oversight_committee_address {
+    address
+    group_policy {
+      address
+      admin_address
+      metadata
+      decision_policy
+      group {
+        id
+        admin_address
+        group_members {
+          member_address
+          weight
+          added_at
+        }
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetOversightCommitteeQuery__
+ *
+ * To run a query within a React component, call `useGetOversightCommitteeQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetOversightCommitteeQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetOversightCommitteeQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetOversightCommitteeQuery(baseOptions?: Apollo.QueryHookOptions<GetOversightCommitteeQuery, GetOversightCommitteeQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetOversightCommitteeQuery, GetOversightCommitteeQueryVariables>(GetOversightCommitteeDocument, options);
+      }
+export function useGetOversightCommitteeLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetOversightCommitteeQuery, GetOversightCommitteeQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetOversightCommitteeQuery, GetOversightCommitteeQueryVariables>(GetOversightCommitteeDocument, options);
+        }
+export type GetOversightCommitteeQueryHookResult = ReturnType<typeof useGetOversightCommitteeQuery>;
+export type GetOversightCommitteeLazyQueryHookResult = ReturnType<typeof useGetOversightCommitteeLazyQuery>;
+export type GetOversightCommitteeQueryResult = Apollo.QueryResult<GetOversightCommitteeQuery, GetOversightCommitteeQueryVariables>;
 export const ParamsDocument = gql`
     query Params {
   stakingParams: staking_params(limit: 1, order_by: {height: desc}) {
@@ -7879,6 +9037,12 @@ export const ParamsDocument = gql`
   govParams: gov_params(limit: 1, order_by: {height: desc}) {
     params
     height
+  }
+  dgovParams: dgov_oversight_committee_params(limit: 1, order_by: {height: desc}) {
+    params
+  }
+  dgovOCAddr: dgov_oversight_committee_address(limit: 1, order_by: {height: desc}) {
+    address
   }
 }
     `;

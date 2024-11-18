@@ -1,0 +1,20 @@
+query GetOversightCommittee {
+  dgov_oversight_committee_address {
+    address
+    group_policy {
+      address
+      admin_address
+      metadata
+      decision_policy
+      group {
+        id
+        admin_address
+        group_members {
+          member_address
+          weight
+          added_at
+        }
+      }
+    }
+  }
+}

@@ -15,4 +15,10 @@ query Params {
     params
     height
   }
+  dgovParams: dgov_oversight_committee_params(limit: 1, order_by: {height: desc}) {
+    params
+  }
+  dgovOCAddr: dgov_oversight_committee_address(limit:1, order_by: {height:desc}) {
+    address
+  }
 }
