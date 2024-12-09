@@ -410,6 +410,14 @@ const customTypeToModel = {
     tagTheme: 'four',
     tagDisplay: 'txUnblockUserLabel',
   },
+  // ======================== Dchain
+  // ========================
+  '/dchain.tx.v1.MsgVerifiablePresentation': {
+    model: MODELS.MsgVp,
+    content: COMPONENTS.DchainVP,
+    tagTheme: 'nine',
+    tagDisplay: 'DChainVerifiablePresentation',
+  },
 };
 type CustomTypeToModel = typeof customTypeToModel;
 

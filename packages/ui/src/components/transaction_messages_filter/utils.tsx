@@ -8,6 +8,10 @@ export const getFilterLabels = () => [
     display: 'bank',
   },
   {
+    key: 'dchain',
+    display: 'dchain',
+  },
+  {
     key: 'crisis',
     display: 'crisis',
   },
