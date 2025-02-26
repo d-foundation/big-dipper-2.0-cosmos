@@ -4,12 +4,14 @@ import type { Categories } from '@/models/msg/types';
 class MsgVP {
   public category: Categories;
   public validator: string;
+  public disclosedValues: string;
   public type: string;
   public json: object;
 
   constructor(payload: object) {
     this.category = 'dchain';
     this.validator = R.pathOr('', ['validator'], payload);
+    (this.disclosedValues = R.pathOr({}, ['disclosedValues'], payload)), null, 2;
     this.type = R.pathOr('', ['type'], payload);
     this.json = R.pathOr({}, ['json'], payload);
   }
@@ -20,6 +22,7 @@ class MsgVP {
       json,
       type: R.pathOr('', ['@type'], json),
       validator: R.pathOr('', ['validator'], json),
+      disclosedValues: R.pathOr({}, ['disclosedValues'], json),
     };
   }
 }
