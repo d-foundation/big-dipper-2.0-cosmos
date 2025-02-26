@@ -57,5 +57,6 @@
   "MsgRevokeAllowance": "<0>{{granter}}</0> revoked allowance for <1>{{grantee}}</1>",
   "MsgCreateVestingAccount": "Vesting account created for <0>{{toAddress}}</0>",
   "MsgCreatePeriodicVestingAccount": "Periodic vesting account created for <0>{{toAddress}}</0>",
-  "txVPContent": "Verifiable presentation from <0>{{validator}}</0> consensus address"
+  "txVPContent": "Verifiable presentation from <0>{{validator}}</0> consensus address.\n",
+  "txVPDisclosedValues": "Disclosed values: <0>{{disclosedValues}}</0>"
 }
