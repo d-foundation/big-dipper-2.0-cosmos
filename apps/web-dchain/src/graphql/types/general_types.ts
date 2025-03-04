@@ -6068,6 +6068,7 @@ export type Transaction = {
   logs?: Maybe<Scalars['jsonb']>;
   memo?: Maybe<Scalars['String']>;
   messages: Scalars['json'];
+  extension_options: Scalars['jsonb'];
   raw_log?: Maybe<Scalars['String']>;
   signatures: Scalars['_text'];
   signer_infos: Scalars['jsonb'];
@@ -6195,6 +6196,8 @@ export enum Transaction_Select_Column {
   Memo = 'memo',
   /** column name */
   Messages = 'messages',
+  /** column name */
+  ExtensionOptions = 'extension_options',
   /** column name */
   RawLog = 'raw_log',
   /** column name */
@@ -7850,7 +7853,7 @@ export type TransactionDetailsQueryVariables = Exact<{
 }>;
 
 
-export type TransactionDetailsQuery = { transaction: Array<{ __typename?: 'transaction', logs?: any | null, hash: string, height: any, fee: any, gasUsed?: any | null, gasWanted?: any | null, success: boolean, memo?: string | null, messages: any, rawLog?: string | null, block: { __typename?: 'block', timestamp: any } }> };
+export type TransactionDetailsQuery = { transaction: Array<{ __typename?: 'transaction', logs?: any | null, hash: string, height: any, fee: any, gasUsed?: any | null, gasWanted?: any | null, success: boolean, memo?: string | null, messages: any, rawLog?: string | null, block: { __typename?: 'block', timestamp: any }, extensionOptions: any }> };
 
 export type TransactionsListenerSubscriptionVariables = Exact<{
   limit?: InputMaybe<Scalars['Int']>;
@@ -9354,6 +9357,7 @@ export const TransactionDetailsDocument = gql`
     success: success
     memo: memo
     messages: messages
+    extensionOptions: extension_options
     logs
     rawLog: raw_log
   }

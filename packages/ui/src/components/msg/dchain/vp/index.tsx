@@ -1,34 +1,30 @@
-import Name from '@/components/name';
-import { MsgVp } from '@/models';
-import { useProfileRecoil } from '@/recoil/profiles/hooks';
+import { MsgVerifiablePresentation } from '@/models';
 import Typography from '@mui/material/Typography';
 import AppTrans from '@/components/AppTrans';
 import { FC } from 'react';
 
-const DchainVP: FC<{ message: MsgVp }> = (props) => {
+const VerifiablePresentation: FC<{ message: MsgVerifiablePresentation }> = (props) => {
   const { message } = props;
-  const validatorMoniker = message.validator;
+  const presentation = message.presentation;
   const disclosedValues = message.disclosedValues;
 
   return (
     <div>
       <Typography>
         <AppTrans
-          i18nKey="message_contents:txVPContent"
-          // components={[<b />]}
-          components={[<Name address={message.validator} name={validatorMoniker} />]}
+          i18nKey="message_contents:txMsgVerifiablePresentation"
+          components={[<b />]}
           values={{
-            validator: validatorMoniker,
+            presentation: presentation,
           }}
         />
       </Typography>
       <Typography>
         <AppTrans
-          i18nKey="message_contents:txVPDisclosedValues"
-          // components={[<b />]}
+          i18nKey="message_contents:txMsgVerifiablePresentationDisclosedValues"
           components={[<p />]}
           values={{
-            disclosedValues: JSON.stringify(disclosedValues, null, 2),
+            disclosedValues: disclosedValues,
           }}
         />
       </Typography>
@@ -36,4 +32,4 @@ const DchainVP: FC<{ message: MsgVp }> = (props) => {
   );
 };
 
-export default DchainVP;
+export default VerifiablePresentation;

@@ -7,13 +7,19 @@ import Messages from '@/screens/transaction_details/components/messages';
 import Overview from '@/screens/transaction_details/components/overview';
 import { useTransactionDetails } from '@/screens/transaction_details/hooks';
 import useStyles from '@/screens/transaction_details/styles';
+import ExtensionOptions from './components/extension_options';
 
 const TransactionDetails = () => {
   const { t } = useAppTranslation('transactions');
   const { classes } = useStyles();
-  const { state, onMessageFilterCallback, toggleMessageDisplay, filterMessages } =
-    useTransactionDetails();
-  const { overview, logs, messages } = state;
+  const {
+    state,
+    onMessageFilterCallback,
+    toggleMessageDisplay,
+    toggleExtensionOptionsDisplay,
+    filterMessages,
+  } = useTransactionDetails();
+  const { overview, logs, messages, extension_options } = state;
 
   return (
     <>
@@ -35,6 +41,14 @@ const TransactionDetails = () => {
               onMessageFilterCallback={onMessageFilterCallback}
             />
             {!!logs && <Logs logs={logs} />}
+            {extension_options.count > 0 && (
+              <ExtensionOptions
+                viewRaw={extension_options.viewRaw}
+                className={classes.extensionOptions}
+                toggleExtensionOptionsDisplay={toggleExtensionOptionsDisplay}
+                extension_options={extension_options}
+              />
+            )}
           </span>
         </LoadAndExist>
       </Layout>

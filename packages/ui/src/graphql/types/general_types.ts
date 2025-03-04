@@ -9542,6 +9542,7 @@ export type Transaction = {
   logs?: Maybe<Scalars['jsonb']>;
   memo?: Maybe<Scalars['String']>;
   messages: Scalars['jsonb'];
+  extension_options: Scalars['jsonb'];
   /** An array relationship */
   messagesByTransactionHashPartitionId: Array<Message>;
   /** An aggregate relationship */
@@ -12227,7 +12228,7 @@ export type GetMessagesByAddressQueryVariables = Exact<{
 }>;
 
 
-export type GetMessagesByAddressQuery = { messagesByAddress: Array<{ __typename?: 'message', transaction?: { __typename?: 'transaction', height: any, hash: string, success: boolean, messages: any, logs?: any | null, block: { __typename?: 'block', height: any, timestamp: any } } | null }> };
+export type GetMessagesByAddressQuery = { messagesByAddress: Array<{ __typename?: 'message', transaction?: { __typename?: 'transaction', height: any, hash: string, success: boolean, messages: any, logs?: any | null, block: { __typename?: 'block', height: any, timestamp: any }, extension_options: any } | null }> };
 
 export type OnlineVotingPowerQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -12300,7 +12301,7 @@ export type TransactionDetailsQueryVariables = Exact<{
 }>;
 
 
-export type TransactionDetailsQuery = { transaction: Array<{ __typename?: 'transaction', logs?: any | null, hash: string, height: any, fee: any, gasUsed?: any | null, gasWanted?: any | null, success: boolean, memo?: string | null, messages: any, rawLog?: string | null, block: { __typename?: 'block', timestamp: any } }> };
+export type TransactionDetailsQuery = { transaction: Array<{ __typename?: 'transaction', logs?: any | null, hash: string, height: any, fee: any, gasUsed?: any | null, gasWanted?: any | null, success: boolean, memo?: string | null, messages: any, rawLog?: string | null, block: { __typename?: 'block', timestamp: any }, extensionOptions: any }> };
 
 export type TransactionsListenerSubscriptionVariables = Exact<{
   limit?: InputMaybe<Scalars['Int']>;
@@ -13829,7 +13830,8 @@ export const TransactionDetailsDocument = gql`
     gasWanted: gas_wanted
     success: success
     memo: memo
-    messages: messages
+    messages: messages,
+    extensionOptions: extension_options,
     logs
     rawLog: raw_log
   }

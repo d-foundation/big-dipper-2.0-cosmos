@@ -31,6 +31,10 @@ type Transactions = {
     count: number;
     items: unknown[];
   };
+  extension_options: {
+    count: number;
+    items: unknown[];
+  };
 };
 
 type TokenUnit = {

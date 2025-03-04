@@ -23,6 +23,14 @@ const useStyles = makeStyles()((theme) => ({
       height: '40vh',
     },
   },
+  extensionOptions: {
+    minHeight: '500px',
+    height: '50vh',
+    [theme.breakpoints.up('lg')]: {
+      minHeight: '650px',
+      height: '40vh',
+    },
+  },
 }));
 
 export default useStyles;

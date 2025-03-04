@@ -412,11 +412,41 @@ const customTypeToModel = {
   },
   // ======================== Dchain
   // ========================
-  '/dchain.tx.v1.MsgVerifiablePresentation': {
+  '/d.tx.v1.MsgValidatorSdjwt': {
     model: MODELS.MsgVp,
     content: COMPONENTS.DchainVP,
     tagTheme: 'nine',
     tagDisplay: 'DChainVerifiablePresentation',
+  },
+  '/cosmwasm.wasm.v1.MsgInstantiateContract': {
+    model: MODELS.MsgInstantiateContract,
+    content: COMPONENTS.InstantiateContract,
+    tagName: 'nine',
+    tagDisplay: 'MsgInstantiateContract',
+  },
+  '/cosmwasm.wasm.v1.MsgStoreCode': {
+    model: MODELS.MsgStoreCode,
+    content: COMPONENTS.StoreCode,
+    tagName: 'nine',
+    tagDisplay: 'MsgStoreCode',
+  },
+  '/d.notary.v1.MsgRegisterNotaryInfo': {
+    model: MODELS.MsgRegisterNotaryInfo,
+    content: COMPONENTS.RegisterNotaryInfo,
+    tagName: 'nine',
+    tagDisplay: 'MsgRegisterNotaryInfo',
+  },
+  '/d.notary.v1.MsgNotarise': {
+    model: MODELS.MsgNotarise,
+    content: COMPONENTS.Notarise,
+    tagName: 'nine',
+    tagDisplay: 'MsgNotarise',
+  },
+  '/d.vcv.v1.VerifiablePresentation': {
+    model: MODELS.MsgVerifiablePresentation,
+    content: COMPONENTS.VerifiablePresentation,
+    tagName: 'nine',
+    tagDisplay: 'MsgVerifiablePresentation',
   },
 };
 type CustomTypeToModel = typeof customTypeToModel;

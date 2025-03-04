@@ -25,7 +25,7 @@ const formatOverview = (data: TransactionDetailsQuery) => {
     gasWanted: data.transaction[0].gasWanted,
     success,
     memo: data.transaction[0].memo ?? '',
-    error: success ? '' : data.transaction[0].rawLog ?? '',
+    error: success ? '' : (data.transaction[0].rawLog ?? ''),
   };
   return overview;
 };
@@ -50,6 +50,17 @@ const formatMessages = (data: TransactionDetailsQuery) => {
   };
 };
 
+// =============================
+// extension_options
+// =============================
+const formatExtensionOptions = (data: TransactionDetailsQuery) => {
+  return {
+    count: data.transaction[0].extensionOptions.length,
+    items: data.transaction[0].extensionOptions,
+    viewRaw: false,
+  };
+};
+
 // ===============================
 // Parse data
 // ===============================
@@ -66,6 +77,7 @@ const formatTransactionDetails = (data: TransactionDetailsQuery) => {
   stateChange.overview = formatOverview(data);
   stateChange.logs = formatLogs(data);
   stateChange.messages = formatMessages(data);
+  stateChange.extension_options = formatExtensionOptions(data);
   return stateChange;
 };
 
@@ -93,6 +105,11 @@ export const useTransactionDetails = () => {
     logs: null,
     messages: {
       filterBy: 'none',
+      viewRaw: false,
+      items: [],
+    },
+    extension_options: {
+      count: 0,
       viewRaw: false,
       items: [],
     },
@@ -156,6 +173,20 @@ export const useTransactionDetails = () => {
     [handleSetState]
   );
 
+  const toggleExtensionOptionsDisplay = useCallback(
+    (_: SyntheticEvent<HTMLInputElement>, checked: boolean) => {
+      handleSetState((prevState) => ({
+        ...prevState,
+        extension_options: {
+          count: prevState.extension_options.count,
+          viewRaw: checked,
+          items: prevState.extension_options.items,
+        },
+      }));
+    },
+    [handleSetState]
+  );
+
   const filterMessages = useCallback(
     (messages: unknown[]) =>
       messages.filter((x) => {
@@ -171,6 +202,7 @@ export const useTransactionDetails = () => {
     state,
     onMessageFilterCallback,
     toggleMessageDisplay,
+    toggleExtensionOptionsDisplay,
     filterMessages,
   };
 };
