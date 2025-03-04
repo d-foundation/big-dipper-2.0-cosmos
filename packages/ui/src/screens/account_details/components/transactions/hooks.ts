@@ -38,6 +38,10 @@ const formatTransactions = (data: GetMessagesByAddressQuery): Transactions[] => 
         count: messages.length,
         items: messages,
       },
+      extension_options: {
+        count: transaction?.extension_options.length,
+        items: transaction?.extension_options,
+      },
       success: transaction?.success ?? false,
       timestamp: transaction?.block.timestamp,
     };

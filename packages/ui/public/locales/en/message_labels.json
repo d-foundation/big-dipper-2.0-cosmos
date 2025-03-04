@@ -56,5 +56,10 @@
   "MsgRevokeAllowance": "Revoke Allowance",
   "MsgCreateVestingAccount": "Create Vesting Account",
   "MsgCreatePeriodicVestingAccount": "Create Periodic Vesting Account",
-  "DChainVerifiablePresentation": "VerifiablePresentation"
+  "DChainVerifiablePresentation": "ValidatorSDJWT",
+  "MsgInstantiateContract": "Instantiate Contract",
+  "MsgStoreCode": "Store Code",
+  "MsgRegisterNotaryInfo": "Register Notary Info",
+  "MsgNotarise": "Notarise",
+  "MsgVerifiablePresentation": "Verifiable Presentation"
 }

@@ -20,4 +20,8 @@ export interface TransactionState {
     viewRaw: boolean;
     items: unknown[];
   };
+  extension_options: {
+    count: number;
+    items: unknown[];
+  };
 }

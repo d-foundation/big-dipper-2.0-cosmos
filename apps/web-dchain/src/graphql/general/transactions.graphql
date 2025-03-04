@@ -20,6 +20,7 @@ query Transactions($limit: Int = 7, $offset: Int = 0) {
       timestamp
     }
     messages
+    extension_options
     logs
   }
 }

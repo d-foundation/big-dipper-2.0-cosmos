@@ -11,6 +11,7 @@ query TransactionDetails($hash: String) {
     success: success
     memo: memo
     messages: messages
+    extensionOptions: extension_options
     logs
     rawLog: raw_log
   }

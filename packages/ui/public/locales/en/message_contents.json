@@ -58,5 +58,17 @@
   "MsgCreateVestingAccount": "Vesting account created for <0>{{toAddress}}</0>",
   "MsgCreatePeriodicVestingAccount": "Periodic vesting account created for <0>{{toAddress}}</0>",
   "txVPContent": "Verifiable presentation from <0>{{validator}}</0> consensus address.\n",
-  "txVPDisclosedValues": "Disclosed values: <0>{{disclosedValues}}</0>"
-}
+  "txVPDisclosedValues": "Disclosed values: <0>{{disclosedValues}}</0>",
+  "txInstantiateContract": "Sender with an address <0>{{sender}}</0> submitted instantiate message as admin <0>{{admin}}</0> for contract with code ID <0>{{codeId}}</0>, label <0>{{label}}</0>.",
+  "txMsgInstantiateContract": "Instantiate message is: \n <0>{{msg}}</0>",
+  "txMsgStoreCodeWithPermission": "Store code was sent by <0>{{sender}}</0> with instantiate permission: \n <0>{{instantiate_permission}}</0>.",
+  "txMsgStoreCodeWithoutPermission": "Store code was sent by <0>{{sender}}</0>.",
+  "txRegisterNotaryInfoWithAdditionalReq": "Notary info was registered by <0>{{sender}}</0> with additional requirements: \n <0>{{vcv_route_and_additional_req}}</0>.",
+  "txRegisterNotaryInfoWithoutAdditionalReq": "Notary info was registered by <0>{{sender}}</0>.",
+  "txMsgRegisterNotaryInfo": "Notary info is: \n <0>{{notary_info}}</0>.",
+  "txMsgNotarise": "Notarisation with id <0>{{notary_info_id}}</0> was sent by <0>{{sender}}</0>.",
+  "txMsgNotariseData": "Notarisation data is: \n <0>{{data}}</0>.",
+  "txMsgNotariseSalt": "Salt: \n <0>{{salt}}</0>.",
+  "txMsgVerifiablePresentation": "The raw presentation is: \n <0>{{presentation}}</0>.",
+  "txMsgVerifiablePresentationDisclosedValues": "The disclosed values are: \n <0>{{disclosedValues}}</0>"
+  }

@@ -69,4 +69,9 @@ export { default as MsgCreatePeriodicVestingAccount } from '@/models/msg/vesting
 export { default as MsgCreateVestingAccount } from '@/models/msg/vesting/msg_create_vesting_account';
 export { default as SlashingParams } from '@/models/slashing_params';
 export { default as StakingParams } from '@/models/staking_params';
-export { default as MsgVp } from '@/models/msg/dchain/vp';
+export { default as MsgVp } from '@/models/msg/dchain/validator_vp';
+export { default as MsgInstantiateContract } from '@/models/msg/dchain/instantiate';
+export { default as MsgStoreCode } from '@/models/msg/dchain/store_code';
+export { default as MsgRegisterNotaryInfo } from '@/models/msg/dchain/register_notary_info';
+export { default as MsgNotarise } from '@/models/msg/dchain/notarise';
+export { default as MsgVerifiablePresentation } from '@/models/msg/dchain/vp';
