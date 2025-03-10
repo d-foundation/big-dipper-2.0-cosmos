@@ -70,5 +70,6 @@
   "txMsgNotariseData": "Notarisation data is: \n <0>{{data}}</0>.",
   "txMsgNotariseSalt": "Salt: \n <0>{{salt}}</0>.",
   "txMsgVerifiablePresentation": "The raw presentation is: \n <0>{{presentation}}</0>.",
-  "txMsgVerifiablePresentationDisclosedValues": "The disclosed values are: \n <0>{{disclosedValues}}</0>"
+  "txMsgVerifiablePresentationDisclosedValues": "The disclosed values are: \n <0>{{disclosedValues}}</0>",
+  "txMsgVerifiablePresentationParadymLink": "You may see the encoded parts of the VP on <0>Paradym<0>"
   }
