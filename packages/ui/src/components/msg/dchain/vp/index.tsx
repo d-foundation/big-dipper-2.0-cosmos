@@ -7,6 +7,7 @@ const VerifiablePresentation: FC<{ message: MsgVerifiablePresentation }> = (prop
   const { message } = props;
   const presentation = message.presentation;
   const disclosedValues = message.disclosedValues;
+  const paradymURL = 'https://paradym.id/tools/sd-jwt-vc#s=' + presentation;
 
   return (
     <div>
@@ -26,6 +27,16 @@ const VerifiablePresentation: FC<{ message: MsgVerifiablePresentation }> = (prop
           values={{
             disclosedValues: disclosedValues,
           }}
+        />
+      </Typography>
+      <Typography>
+        <AppTrans
+          i18nKey="message_contents:txMsgVerifiablePresentationParadymLink"
+          components={[
+            <a href={paradymURL} target="_blank" rel="noreferrer" title="Paradym">
+              ,
+            </a>,
+          ]}
         />
       </Typography>
     </div>
