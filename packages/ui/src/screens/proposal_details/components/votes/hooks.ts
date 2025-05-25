@@ -6,10 +6,10 @@ import {
   useProposalDetailsVotesQuery,
 } from '@/graphql/types/general_types';
 import type { VoteState } from '@/screens/proposal_details/components/votes/types';
-import { toValidatorAddress } from '@/utils/prefix_convert';
 
 const formatVotes = (data: ProposalDetailsVotesQuery) => {
   const validatorDict: { [key: string]: unknown } = {};
+
   const validators = data.validatorStatuses.map((x) => {
     const selfDelegateAddress = x?.validator?.validatorInfo?.selfDelegateAddress ?? '';
     validatorDict[selfDelegateAddress] = false;
@@ -50,7 +50,7 @@ const formatVotes = (data: ProposalDetailsVotesQuery) => {
   const validatorsNotVoted = validators
     .filter((x) => validatorDict[x] === false)
     .map((address) => ({
-      user: toValidatorAddress(address),
+      user: address,
       vote: 'NOT_VOTED',
     }));
 
